@@ -235,7 +235,12 @@
 		"value": "drop in a bucket"
 	},
 	{
-		"value": "vague"
+		"value": "vague",
+		"definitions": [
+			{
+				"value": "unclear, uncpecific"
+			}
+		]
 	},
 	{
 		"value": "Hey, you need to cut yourself some slack, okay?"
@@ -551,93 +556,237 @@
 		"value": "cope with smth, cope under pressure"
 	},
 	{
-		"value": ""
+		"value": "The right set of channels will keep you both focused and informed."
 	},
 	{
-		"value": ""
+		"value": "exaggerate"
 	},
 	{
-		"value": ""
+		"value": "collocations"
 	},
 	{
-		"value": ""
+		"value": "porridge"
 	},
 	{
-		"value": ""
+		"value": "cereals"
 	},
 	{
-		"value": ""
+		"value": "snap your fingers"
 	},
 	{
-		"value": ""
+		"value": "shrug your shoulders"
 	},
 	{
-		"value": ""
+		"value": "clench your fist"
 	},
 	{
-		"value": ""
+		"value": "raise your eyebrows"
 	},
 	{
-		"value": ""
+		"value": "fold your arms"
 	},
 	{
-		"value": ""
+		"value": "clap your hands"
 	},
 	{
-		"value": ""
+		"value": "hiccup"
 	},
 	{
-		"value": ""
+		"value": "rumble"
 	},
 	{
-		"value": ""
+		"value": "yawn"
 	},
 	{
-		"value": ""
+		"value": "tremble (because of emotion)"
 	},
 	{
-		"value": ""
+		"value": "shiver (because of cold)"
 	},
 	{
-		"value": ""
+		"value": "She patted me on the back when I told her that I had passed my driving test."
 	},
 	{
-		"value": ""
+		"value": "She nudged me on the arm during the boring lecture."
 	},
 	{
-		"value": ""
+		"value": "He called me loudly and beckoned me over with his finger."
 	},
 	{
-		"value": ""
+		"value": "For a second I thought she was being serious, but then she winked at me."
 	},
 	{
-		"value": ""
+		"value": "I asked if she wanted to go to the cinema, and she nodded her head in agreement."
 	},
 	{
-		"value": ""
+		"value": "When his team lost the match, he just sat there shaking his head."
 	},
 	{
-		"value": ""
+		"value": "Don't take her seriously, she's just pulling your leg."
 	},
 	{
-		"value": ""
+		"value": "He was out of control but his parents finally decided to put their foot down."
 	},
 	{
-		"value": ""
+		"value": "We don't have a plan, we'll just have to play it by ear."
 	},
 	{
-		"value": ""
+		"value": "The two cyclists were almost neck and neck at the finish."
 	},
 	{
-		"value": ""
+		"value": "Kate need to go out with some friends and let her hair down. She's been working so hard lately."
 	},
 	{
-		"value": ""
+		"value": "I have my final exam tomorrow. Keep your fingers crossed for me!"
 	},
 	{
-		"value": ""
+		"value": "Tell me what happened - I'm all ears."
 	},
 	{
-		"value": ""
+		"value": "Working in an open plan office can really keep you on your toes: you have to keep focussing on the job."
+	},
+	{
+		"value": "to interlock fingers"
+	},
+	{
+		"value": "to shake hands"
+	},
+	{
+		"value": "Hands in the air!"
+	},
+	{
+		"value": "How does it feel in my arms?",
+		"tags": [
+			{
+				"value": "song lyrics"
+			},
+			{
+				"value": "Kylie Minogue"
+			}
+		]
+	},
+	{
+		"value": "to twist someone's arm",
+		"definitions": [
+			{
+				"value": "To pressurize someone into doing something that they are reluctant to do.",
+				"examples": [
+					{
+						"value": "I've twisted his arm and he'll get you some tickets."
+					}
+				]
+			}
+		]
+	},
+	{
+		"value": "articulate person",
+		"definitions": [
+			{
+				"value": "clear and easy to understand"
+			}
+		]
+	},
+	{
+		"value": "reserved person"
+	},
+	{
+		"value": "coherent person"
+	},
+	{
+		"value": "hesitant person"
+	},
+	{
+		"value": "eloquent person"
+	},
+	{
+		"value": "inhibited"
+	},
+	{
+		"value": "extrovert"
+	},
+	{
+		"value": "introvert"
+	},
+	{
+		"value": "persuasive"
+	},
+	{
+		"value": "succinct",
+		"definitions": [
+			{
+				"value": "clear, short, precise, concise"
+			}
+		]
+	},
+	{
+		"value": "rambling"
+	},
+	{
+		"value": "digress",
+		"definitions": [
+			{
+				"value": "go off the topic"
+			}
+		]
+	},
+	{
+		"value": "amount to",
+		"definitions": [
+			{
+				"value": "achieve"
+			}
+		]
+	},
+	{
+		"value": "handout",
+		"definitions": [
+			{
+				"value": "somethig to hand out"
+			}
+		]
+	},
+	{
+		"value": "include smbd. in"
+	},
+	{
+		"value": "impress with"
+	},
+	{
+		"value": "interfere with"
+	},
+	{
+		"value": "cope with"
+	},
+	{
+		"value": "prohibit from"
+	},
+	{
+		"value": "differ from"
+	},
+	{
+		"value": "suffer from"
+	},
+	{
+		"value": "discourage smbd. from"
+	},
+	{
+		"value": "dream of"
+	},
+	{
+		"value": "pace"
+	},
+	{
+		"value": "lucrative"
+	},
+	{
+		"value": "ball-park figure"
+	},
+	{
+		"value": "row",
+		"definitions": [
+			{
+				"value": "conflict"
+			}
+		]
 	}
 ]
