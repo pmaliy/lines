@@ -235,184 +235,320 @@
 		"value": "drop in a bucket"
 	},
 	{
-		"value": ""
+		"value": "vague"
 	},
 	{
-		"value": ""
+		"value": "Hey, you need to cut yourself some slack, okay?"
 	},
 	{
-		"value": ""
+		"value": "wishful thinking"
 	},
 	{
-		"value": ""
+		"value": "It was really dark... - They're called flashlights, you dipshits."
 	},
 	{
-		"value": ""
+		"value": "Someone woke up on a wrong side of the bed this morning."
 	},
 	{
-		"value": ""
+		"value": "easy-peasy lemon squeezy"
 	},
 	{
-		"value": ""
+		"value": "awesome sauce"
 	},
 	{
-		"value": ""
+		"value": "My mistake. However, I'm on a curiosity voyage, and I need my paddles to travel."
 	},
 	{
-		"value": ""
+		"value": "presumptuous"
 	},
 	{
-		"value": ""
+		"value": "Hard to see the forest for the trees"
 	},
 	{
-		"value": ""
+		"value": "bandwagon"
 	},
 	{
-		"value": ""
+		"value": "Not a lot of light bulbs went off"
 	},
 	{
-		"value": ""
+		"value": "All the pieces fit in"
 	},
 	{
-		"value": ""
+		"value": "behind the scenes"
 	},
 	{
-		"value": ""
+		"value": "under the hood"
 	},
 	{
-		"value": ""
+		"value": "take this with a grain of salt"
 	},
 	{
-		"value": ""
+		"value": "It looks like he's rooting for you to go do smth."
 	},
 	{
-		"value": ""
+		"value": "Everybody is still buzzing about Oprah Winfrey's incredible speech."
 	},
 	{
-		"value": ""
+		"value": "to bring the audience to their feet"
 	},
 	{
-		"value": ""
+		"value": "role model"
 	},
 	{
-		"value": ""
+		"value": "GOAT"
 	},
 	{
-		"value": ""
+		"value": "greatest of all time"
 	},
 	{
-		"value": ""
+		"value": "to go down in history"
 	},
 	{
-		"value": ""
+		"value": "to run for president"
 	},
 	{
-		"value": ""
+		"value": "acceptance speech"
 	},
 	{
-		"value": ""
+		"value": "speak up"
 	},
 	{
-		"value": ""
+		"value": "Speaking your truth is the most powerful tool."
 	},
 	{
-		"value": ""
+		"value": "to cook smth. up"
 	},
 	{
-		"value": ""
+		"value": "Keep the jokes clean, please!"
 	},
 	{
-		"value": ""
+		"value": "to end up somewhere"
 	},
 	{
-		"value": ""
+		"value": "IDGAF"
 	},
 	{
-		"value": ""
+		"value": "I don't give a fuck"
 	},
 	{
-		"value": ""
+		"value": "I don't give a flying fuck!"
 	},
 	{
-		"value": ""
+		"value": "Zero fucks given"
 	},
 	{
-		"value": ""
+		"value": "look out"
 	},
 	{
-		"value": ""
+		"value": "to choose smth. over smth."
 	},
 	{
-		"value": ""
+		"value": "I'd rather be sleeping"
 	},
 	{
-		"value": ""
+		"value": "live out of a suitcase"
 	},
 	{
-		"value": ""
+		"value": "backseat driver"
 	},
 	{
-		"value": ""
+		"value": "drive someone up the wall"
 	},
 	{
-		"value": ""
+		"value": "hit the road"
 	},
 	{
-		"value": ""
+		"value": "we are in the same boat"
 	},
 	{
-		"value": ""
+		"value": "I just want to make sure that we are on the same page."
 	},
 	{
-		"value": ""
+		"value": "itchy feet"
 	},
 	{
-		"value": ""
+		"value": "miss the boat"
 	},
 	{
-		"value": ""
+		"value": "off the beaten track"
 	},
 	{
-		"value": ""
+		"value": "out of the box"
 	},
 	{
-		"value": ""
+		"value": "put the pedal to the metal"
 	},
 	{
-		"value": ""
+		"value": "road rage"
 	},
 	{
-		"value": ""
+		"value": "air rage"
 	},
 	{
-		"value": ""
+		"value": "to be taken for a ride"
 	},
 	{
-		"value": ""
+		"value": "drop the ball"
 	},
 	{
-		"value": ""
+		"value": "drop the hummer"
 	},
 	{
-		"value": ""
+		"value": "stiff upper lip"
 	},
 	{
-		"value": ""
+		"value": "goggles"
 	},
 	{
-		"value": ""
+		"value": "snorkle"
 	},
 	{
-		"value": ""
+		"value": "how awful"
 	},
 	{
-		"value": ""
+		"value": "How did you deal with it?"
 	},
 	{
-		"value": ""
+		"value": "What did you like especially about...?"
 	},
 	{
-		"value": ""
+		"value": "What else impressed you?"
+	},
+	{
+		"value": "Are you saying...?"
+	},
+	{
+		"value": "What do you mean by...?"
+	},
+	{
+		"value": "Could you be more specific, please?"
+	},
+	{
+		"value": "Have i got this right?"
+	},
+	{
+		"value": "Correct me if I'm wrong,..."
+	},
+	{
+		"value": "Could you please clarify?"
+	},
+	{
+		"value": "libel",
+		"definitions": [
+			{
+				"value": "lie in written form which caused damage"
+			}
+		]
+	},
+	{
+		"value": "blasphemy"
+	},
+	{
+		"value": "run off"
+	},
+	{
+		"value": "constituency"
+	},
+	{
+		"value": "commute"
+	},
+	{
+		"value": "red tape",
+		"definitions": [
+			{
+				"value": "bureaucracy"
+			}
+		]
+	},
+	{
+		"value": "remuneration",
+		"definitions": [
+			{
+				"value": "all the money you get for a job - salary, bonuses, commission"
+			}
+		]
+	},
+	{
+		"value": "appraise"
+	},
+	{
+		"value": "gauge",
+		"definitions": [
+			{
+				"value": "to measure"
+			}
+		]
+	},
+	{
+		"value": "to weigh up",
+		"definitions": [
+			{
+				"value": "to assess"
+			}
+		]
+	},
+	{
+		"value": "to bring smth. up"
+	},
+	{
+		"value": "to carry out (instractions, orders)"
+	},
+	{
+		"value": "deal with smth."
+	},
+	{
+		"value": "fill me in",
+		"definitions": [
+			{
+				"value": "give me an update"
+			}
+		]
+	},
+	{
+		"value": "to get down to"
+	},
+	{
+		"value": "to look into"
+	},
+	{
+		"value": "to move on to"
+	},
+	{
+		"value": "put smth. off",
+		"definitions": [
+			{
+				"value": "to set off, to make off",
+				"examples": [
+					{
+						"value": "The color of the water really put me off, so I didn't get in."
+					}
+				]
+			}
+		]
+	},
+	{
+		"value": "to point out"
+	},
+	{
+		"value": "see to - make sure"
+	},
+	{
+		"value": "stick to"
+	},
+	{
+		"value": "back out of (...an agreement)"
+	},
+	{
+		"value": "fall through - to fail"
+	},
+	{
+		"value": "turn down"
+	},
+	{
+		"value": "walk out on smth - stop discussion about smth"
+	},
+	{
+		"value": "cope with smth, cope under pressure"
 	},
 	{
 		"value": ""
