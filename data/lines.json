@@ -788,5 +788,47 @@
 				"value": "conflict"
 			}
 		]
+	},
+	{
+		"value": "to kick-open the door"
+	},
+	{
+		"value": "Hey, how is it going? - Good / It's going good / great"
+	},
+	{
+		"value": "Hey, what's up? - No much, what's up with you?"
+	},
+	{
+		"value": "to speak/sound like a text book"
+	},
+	{
+		"value": "If you don't like someone - try to walk a mile in their shoes. And after that -  who cares? You're a mile away from them and you've got their shoes."
+	},
+	{
+		"value": "How are you feeling? - Never better!"
+	},
+	{
+		"value": "scrutinize",
+		"definitions": [
+			{
+				"value": "examine, look closely"
+			}
+		]
+	},
+	{
+		"value": "pitch",
+		"definitions": [
+			{
+				"value": "throw, advertise"
+			}
+		]
+	},
+	{
+		"value": "emasculate",
+		"definitions": [
+			{
+				"value": "manly things taken from"
+			}
+		]
 	}
 ]
