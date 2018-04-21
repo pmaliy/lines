@@ -7,7 +7,11 @@
 		"definitions": [
 			{
 				"value": "excellent; impressive",
-				"example": "his style is so rad"
+				"examples": [
+					{
+						"value": "his style is so rad"
+					}
+				]
 			},
 			
 		]
