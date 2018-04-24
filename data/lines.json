@@ -12,7 +12,7 @@
 						"value": "his style is so rad"
 					}
 				]
-			},
+			}
 			
 		]
 	},
@@ -40,8 +40,8 @@
 			{
 				"value": "may be + perhaps"
 			}
-		],
-	}
+		]
+	},
 	{
 		"value": "Failure is the mother off all success."
 	},
@@ -49,7 +49,7 @@
 		"value": "tackle",
 		"definitions": [
 			{
-				"value": "",
+				"value": "make determined efforts to deal with (a problem or difficult task)",
 				"examples": [
 					{
 						"value": "Police have launched an initiative to tackle rising crime."
@@ -59,7 +59,7 @@
 					}
 				]
 			}
-		],
+		]
 	},
 	{
 		"value": "It's part of the spec, and I don't have a strong opinion on it - I'm just informing readers."
