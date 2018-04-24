@@ -42,26 +42,25 @@ function LinesStorage(db) {
   const saveLines = data => Promise.all( data.map(saveLine) );
   
   const saveLine = data => {
-    const keys = Object.keys(data);
-    if (keys.length === 1) {
-//      console.log('POST');
-//      console.log(data);
+    if (Object.keys(data).length === 1) {
       return create(data);
     }
+    
     let metaPromises = saveMeta(data);
     let metaData = null;
     let lineId = null;
+    
     return Promise.all(metaPromises)
       .then(meta => {
         metaData = meta.reduce((mix, chunk) => ({ ...mix, ...chunk }), {});
         return create({ ...data, ...metaData });
       })
-//      .then(id => {
-//        lineId = id;
-//        metaPromises = updateMeta(lineId, metaData);
-//        return Promise.all(metaPromises);
-//      })
-//      .then(() => lineId);
+      .then(id => {
+        lineId = id;
+        metaPromises = updateMeta(lineId, metaData);
+        return Promise.all(metaPromises);
+      })
+      .then(() => lineId);
   };
 
   const saveMeta = data => Object.keys(data)
@@ -69,24 +68,13 @@ function LinesStorage(db) {
       [key]: ids.reduce((hash, id) => ({ ...hash, [id]: true }), {})
     })) : Promise.resolve());
   
-  const updateMeta = (lineId, metaData) => {
-    console.log('updateMeta()');
-    console.log(lineId);
-    console.log(metaData);
-    
-
-    return Promise.all(
-      Object.keys(metaData)
-        .map(key => Object.keys(metaData[key]))
-        .map(ids => Promise.all(
-          ids.map(id => db.patch('lines/' + id, {
-            [reverseKeysMap[key]]: {
-              [lineId]: true
-            }
-          }))
-        ))
-    );
-  };
+  const updateMeta = (lineId, metaData) => Object.keys(metaData).map(key => Promise.all(
+    Object.keys(metaData[key]).map(id => db.patch('lines/' + id, {
+      [reverseKeysMap[key]]: {
+        [lineId]: true
+      }
+    }))
+  ));
   
   return {
     create,
@@ -94,7 +82,7 @@ function LinesStorage(db) {
     update,
     delere,
     importJSON
-  }
+  };
 }
 
 const db = new Rest(DB_URL_BASE);
@@ -108,11 +96,11 @@ const lines = new LinesStorage(db);
 //db.put('lines', { foobar: true });
 
 // lines json import to db
-const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
-getLinesJSON()
-  .then(json => json.slice(0, 2))
-  .then(lines.importJSON)
-  .then(console.log);
+//const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
+//getLinesJSON()
+//  .then(json => json.slice(0, 2))
+//  .then(lines.importJSON)
+//  .then(console.log);
 
 
 
