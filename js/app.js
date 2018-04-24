@@ -1,17 +1,33 @@
-const DB_URL_BASE = 'https://lines-c8c9f.firebaseio.com/';
-
-function Rest(base) {
-  const postfix = '.json';
+const app = ({ getLinesJSON, linesStorage }) => {
+  const lines = linesStorage();
+//  lines.read().then(console.log);
   
-  const href = path => base + path + postfix;
-  const request = (path = '', init = {}) => fetch(href(path), init).then(response => response.json());
-  const send = (path = '', data = {}, init = {}) => fetch(href(path), {
+  // cleanup
+//  lines.update(null, { foobar: true });
+  
+  // json data import
+//  getLinesJSON()
+//    .then(json => json.slice(0, 2))
+//    .then(lines.importJSON)
+//    .then(console.log);
+};
+
+const firebaseStorage = (state) => {
+  const { host } = state;
+  
+  const postfix = '.json';  
+  const url = path => host + path + postfix;
+  const toJson = data => data.json();
+  const extractId = ({ name: id }) => id;
+  
+  const request = (path = '', init = {}) => fetch(url(path), init).then(toJson);
+  const send = (path = '', data = {}, init = {}) => fetch(url(path), {
     body: JSON.stringify(data),
     headers: {
       'content-type': 'application/json'
     },
     ...init
-  }).then(response => response.json());
+  }).then(toJson).then(extractId);
   
   return {
     get: (path = '', init = {}) => request(path, init),
@@ -23,20 +39,30 @@ function Rest(base) {
     // creale new list entry with auto-generated timestamp-based key
     post:  (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'POST' })
   };
-}
+};
 
-function LinesStorage(db) {
-  const create = data => db.post('lines', data).then(({ name: id }) => id);
-  const read = id => db.get('lines' + (id ? `/${id}` : ''));
-  const update = () => null;
-  const delere = () => null;
+const crudStorage = (state) => {
+  const { basepath } = state;
+  const { get, del, put, patch, post } = firebaseStorage({ host: 'https://lines-c8c9f.firebaseio.com/' });
+  const path = id => basepath + (id ? `/${id}` : '');
+  return {
+    create: data => post(path(), data),
+    read: id => get(path(id)),
+    update: (id, data) => id ? patch(path(id), data) : put(path(), data),
+    // TODO
+    delere: id => Promise.resolve(id),
+  };
+};
+
+const linesStorage = () => {
+  const { create, read, update, delere } = crudStorage({ basepath: 'lines' });
   const importJSON = json => Array.isArray(json) ? saveLines(json) : saveLine(json);
-   
-  // 2-way connections map
-  const reverseKeysMap = {
-    definitions: 'terms',
-    examples: 'subjects',
-    tags: 'links'
+  const instance = {
+    create,
+    read,
+    update,
+    delere,
+    importJSON
   };
   
   const saveLines = data => Promise.all( data.map(saveLine) );
@@ -63,51 +89,29 @@ function LinesStorage(db) {
       .then(() => lineId);
   };
 
+  // 2-way connections map
+  const reverseKeysMap = {
+    definitions: 'terms',
+    examples: 'subjects',
+    tags: 'links'
+  };
+
   const saveMeta = data => Object.keys(data)
     .map(key => key !== 'value' ? saveLines(data[key]).then(ids => ({
       [key]: ids.reduce((hash, id) => ({ ...hash, [id]: true }), {})
     })) : Promise.resolve());
   
   const updateMeta = (lineId, metaData) => Object.keys(metaData).map(key => Promise.all(
-    Object.keys(metaData[key]).map(id => db.patch('lines/' + id, {
+    Object.keys(metaData[key]).map(id => update(id, {
       [reverseKeysMap[key]]: {
         [lineId]: true
       }
     }))
   ));
   
-  return {
-    create,
-    read,
-    update,
-    delere,
-    importJSON
-  };
-}
+  return instance;
+};
 
-const db = new Rest(DB_URL_BASE);
-//db.post('lines', {fizz: 'buzz'}).then(() => db.get('lines')).then(console.log);
-//db.get('lines').then(console.log);
+const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
 
-const lines = new LinesStorage(db);
-//lines.read().then(console.log);
-
-// lines db cleanup
-//db.put('lines', { foobar: true });
-
-// lines json import to db
-//const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
-//getLinesJSON()
-//  .then(json => json.slice(0, 2))
-//  .then(lines.importJSON)
-//  .then(console.log);
-
-
-
-
-
-
-
-
-
-
+app({ getLinesJSON, linesStorage });
