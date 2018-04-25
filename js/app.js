@@ -1,4 +1,4 @@
-const app = ({ getLinesJSON, linesStorage }) => {
+const app = () => {
   const lines = linesStorage();
 //  lines.read().then(console.log);
   
@@ -7,9 +7,9 @@ const app = ({ getLinesJSON, linesStorage }) => {
   
   // json data import
 //  getLinesJSON()
-//    .then(json => json.slice(0, 2))
-//    .then(lines.importJSON)
-//    .then(console.log);
+  Promise.resolve( testSameTag )
+    .then(lines.importJSON)
+    .then(console.log);
 };
 
 const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
@@ -114,4 +114,104 @@ const firebaseStorage = (state) => {
   };
 };
 
-app({ getLinesJSON, linesStorage });
+
+// import test json data
+
+const testNoMeta = [
+  {
+  	"value": "Oh, give me a break!"
+  }
+];
+
+const testDef = [
+  {
+  	"value": "libel",
+  	"definitions": [
+  		{
+  			"value": "lie in written form which caused damage"
+  		}
+  	]
+  }
+];
+
+const testDefEx = [
+  {
+  	"value": "rad",
+  	"definitions": [
+  		{
+  			"value": "excellent; impressive",
+  			"examples": [
+  				{
+  					"value": "his style is so rad"
+  				}
+  			]
+  		}
+  		
+  	]
+  }
+];
+
+const testDefMultiEx = [
+  {
+  	"value": "tackle",
+  	"definitions": [
+  		{
+  			"value": "make determined efforts to deal with (a problem or difficult task)",
+  			"examples": [
+  				{
+  					"value": "Police have launched an initiative to tackle rising crime."
+  				},
+  				{
+  					"value": "If you want to tackle on these tickets then go ahead."
+  				}
+  			]
+  		}
+  	]
+  }
+];
+
+const testMultiDefEx = [
+  {
+  	"value": "grin",
+  	"definitions": [
+  		{
+  			"value": "A broad smile.",
+  			"examples": [
+  				{
+  					"value": "'OK,' he said with a grin."
+  				}
+  			]
+  		},
+  		{
+  			"value": "To smile broadly, especially in an unrestrained manner and with the mouth open.",
+  			"examples": [
+  				{
+  					"value": "Dennis appeared, grinning cheerfully."
+  				}
+  			]
+  		}
+  	]
+  }
+];
+
+const testSameTag = [
+  {
+		"value": "It's very easy to act like a jerk, and then say, \"Well, I'm a jerk, so that's that\", but it's just you making excuses for your excuses.",
+		"tags": [
+			{
+				"value": "Dirk Gently"
+			}
+		]
+	},
+	{
+		"value": "You get in my way again, I'm taking your head off!",
+		"tags": [
+			{
+				"value": "Dirk Gently"
+			}
+		]
+	}
+];
+
+// app launch
+app();
