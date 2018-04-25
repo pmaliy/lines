@@ -834,5 +834,63 @@
 				"value": "manly things taken from"
 			}
 		]
+	},
+	{
+		"value": "humble"
+	},
+	{
+		"value": "modest"
+	},
+	{
+		"value": "insidious"
+	},
+	{
+		"value": "subtle"
+	},
+	{
+		"value": "Hope is not a strategy."
+	},
+	{
+		"value": "It's very easy to act like a jerk, and then say, \"Well, I'm a jerk, so that's that\", but it's just you making excuses for your excuses.",
+		"tags": [
+			{
+				"value": "Dirk Gently"
+			}
+		]
+	},
+	{
+		"value": "You get in my way again, I'm taking your head off!",
+		"tags": [
+			{
+				"value": "Dirk Gently"
+			}
+		]
+	},
+	{
+		"value": "That building? It's condemned. It was supposed to get torn down.",
+		"tags": [
+			{
+				"value": "Dirk Gently"
+			}
+		]
+	},
+	{
+		"value": "They subside through the extortion of psychic energy. Originally, we classified them as vampires.",
+		"tags": [
+			{
+				"value": "Dirk Gently"
+			}
+		]
+	},
+	{
+		"value": "In a closed society where everybody is guilty, the only crime is getting caught. In a world of thieves, the only final sin is stupidity."
+	},
+	{
+		"value": "The goal of the alpha phase is to iron out technical issues while we implement the core features of the game.",
+		"tags": [
+			{
+				"value": "Wolcen: Lords of mayhem"
+			}
+		]
 	}
 ]
