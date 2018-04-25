@@ -7,75 +7,31 @@ const app = () => {
   
   // json data import
 //  getLinesJSON()
-  Promise.resolve( testSameTag )
-    .then(lines.importJSON)
-    .then(console.log);
+//  Promise.resolve( testSameTag )
+//    .then(lines.importJSON)
+//    .then(console.log);
 };
 
 const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
 
 const linesStorage = () => {
   const { create, read, update, delere } = crudStorage({ basepath: 'lines' });
-  const importJSON = json => Array.isArray(json) ? saveLines(json) : saveLine(json);
-  const instance = {
+  const { importJSON } = linesImporter({ create, update });
+  
+  return {
     create,
     read,
     update,
     delere,
     importJSON
   };
-  
-  const saveLines = data => Promise.all( data.map(saveLine) );
-  
-  const saveLine = data => {
-    if (Object.keys(data).length === 1) {
-      return create(data);
-    }
-    
-    let metaPromises = saveMeta(data);
-    let metaData = null;
-    let lineId = null;
-    
-    return Promise.all(metaPromises)
-      .then(meta => {
-        metaData = meta.reduce((mix, chunk) => ({ ...mix, ...chunk }), {});
-        return create({ ...data, ...metaData });
-      })
-      .then(id => {
-        lineId = id;
-        metaPromises = updateMeta(lineId, metaData);
-        return Promise.all(metaPromises);
-      })
-      .then(() => lineId);
-  };
-
-  // 2-way connections map
-  const reverseKeysMap = {
-    definitions: 'terms',
-    examples: 'subjects',
-    tags: 'links'
-  };
-
-  const saveMeta = data => Object.keys(data)
-    .map(key => key !== 'value' ? saveLines(data[key]).then(ids => ({
-      [key]: ids.reduce((hash, id) => ({ ...hash, [id]: true }), {})
-    })) : Promise.resolve());
-  
-  const updateMeta = (lineId, metaData) => Object.keys(metaData).map(key => Promise.all(
-    Object.keys(metaData[key]).map(id => update(id, {
-      [reverseKeysMap[key]]: {
-        [lineId]: true
-      }
-    }))
-  ));
-  
-  return instance;
 };
 
-const crudStorage = (state) => {
+const crudStorage = state => {
   const { basepath } = state;
   const { get, del, put, patch, post } = firebaseStorage({ host: 'https://lines-c8c9f.firebaseio.com/' });
   const path = id => basepath + (id ? `/${id}` : '');
+  
   return {
     create: data => post(path(), data),
     read: id => get(path(id)),
@@ -85,7 +41,7 @@ const crudStorage = (state) => {
   };
 };
 
-const firebaseStorage = (state) => {
+const firebaseStorage = state => {
   const { host } = state;
   
   const postfix = '.json';  
@@ -113,6 +69,64 @@ const firebaseStorage = (state) => {
     post:  (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'POST' })
   };
 };
+
+const linesImporter = state => {
+  const { create, update } = state;
+  // already added lines map
+  const valueToLinePromiseMap = {};
+  // 2-way connections map
+  const keyToReverseKeyMap = {
+    definitions: 'terms',
+    examples: 'subjects',
+    tags: 'links'
+  };
+  
+  const saveLines = linesData => Promise.all(linesData.map(data => {
+    if (valueToLinePromiseMap[data.value]) {
+      return valueToLinePromiseMap[data.value];
+    }
+    
+    let linePromise = null;
+    
+    if (Object.keys(data).length === 1) {
+      linePromise = create(data);
+    } else {
+      let metaPromises = saveMeta(data);
+      let metaData = null;
+      let lineId = null;
+      
+      linePromise = Promise.all(metaPromises)
+        .then(meta => {
+          metaData = meta.reduce((mix, chunk) => ({ ...mix, ...chunk }), {});
+          return create({ ...data, ...metaData });
+        })
+        .then(id => {
+          lineId = id;
+          metaPromises = updateMeta(lineId, metaData);
+          return Promise.all(metaPromises);
+        })
+        .then(() => lineId);
+    }
+    
+    valueToLinePromiseMap[data.value] = linePromise;
+    
+    return linePromise;
+  }));
+
+  const saveMeta = data => Object.keys(data).map(key => key !== 'value' ? saveLines(data[key]).then(ids => ({
+    [key]: ids.reduce((hash, id) => ({ ...hash, [id]: true }), {})
+  })) : Promise.resolve());
+  
+  const updateMeta = (lineId, metaData) => Object.keys(metaData).map(key => Promise.all(
+    Object.keys(metaData[key]).map(id => update(id + '/' + keyToReverseKeyMap[key], {
+      [lineId]: true
+    }))
+  ));
+  
+  return {
+    importJSON: saveLines
+  }
+}
 
 
 // import test json data
