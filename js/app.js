@@ -12,47 +12,7 @@ const app = ({ getLinesJSON, linesStorage }) => {
 //    .then(console.log);
 };
 
-const firebaseStorage = (state) => {
-  const { host } = state;
-  
-  const postfix = '.json';  
-  const url = path => host + path + postfix;
-  const toJson = data => data.json();
-  const extractId = ({ name: id }) => id;
-  
-  const request = (path = '', init = {}) => fetch(url(path), init).then(toJson);
-  const send = (path = '', data = {}, init = {}) => fetch(url(path), {
-    body: JSON.stringify(data),
-    headers: {
-      'content-type': 'application/json'
-    },
-    ...init
-  }).then(toJson).then(extractId);
-  
-  return {
-    get: (path = '', init = {}) => request(path, init),
-    del: (path = '', init = {}) => request(path, { ...init, method: 'DELETE' }),
-    // replace node
-    put: (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'PUT' }),
-    // update node
-    patch: (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'PATCH' }),
-    // creale new list entry with auto-generated timestamp-based key
-    post:  (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'POST' })
-  };
-};
-
-const crudStorage = (state) => {
-  const { basepath } = state;
-  const { get, del, put, patch, post } = firebaseStorage({ host: 'https://lines-c8c9f.firebaseio.com/' });
-  const path = id => basepath + (id ? `/${id}` : '');
-  return {
-    create: data => post(path(), data),
-    read: id => get(path(id)),
-    update: (id, data) => id ? patch(path(id), data) : put(path(), data),
-    // TODO
-    delere: id => Promise.resolve(id),
-  };
-};
+const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
 
 const linesStorage = () => {
   const { create, read, update, delere } = crudStorage({ basepath: 'lines' });
@@ -112,6 +72,46 @@ const linesStorage = () => {
   return instance;
 };
 
-const getLinesJSON = () => fetch('data/lines.json' + location.search).then(data => data.json());
+const crudStorage = (state) => {
+  const { basepath } = state;
+  const { get, del, put, patch, post } = firebaseStorage({ host: 'https://lines-c8c9f.firebaseio.com/' });
+  const path = id => basepath + (id ? `/${id}` : '');
+  return {
+    create: data => post(path(), data),
+    read: id => get(path(id)),
+    update: (id, data) => id ? patch(path(id), data) : put(path(), data),
+    // TODO
+    delere: id => Promise.resolve(id),
+  };
+};
+
+const firebaseStorage = (state) => {
+  const { host } = state;
+  
+  const postfix = '.json';  
+  const url = path => host + path + postfix;
+  const toJson = data => data.json();
+  const extractId = ({ name: id }) => id;
+  
+  const request = (path = '', init = {}) => fetch(url(path), init).then(toJson);
+  const send = (path = '', data = {}, init = {}) => fetch(url(path), {
+    body: JSON.stringify(data),
+    headers: {
+      'content-type': 'application/json'
+    },
+    ...init
+  }).then(toJson).then(extractId);
+  
+  return {
+    get: (path = '', init = {}) => request(path, init),
+    del: (path = '', init = {}) => request(path, { ...init, method: 'DELETE' }),
+    // replace node
+    put: (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'PUT' }),
+    // update node
+    patch: (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'PATCH' }),
+    // creale new list entry with auto-generated timestamp-based key
+    post:  (path = '', data = {}, init = {}) => send(path, data, { ...init, method: 'POST' })
+  };
+};
 
 app({ getLinesJSON, linesStorage });
