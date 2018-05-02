@@ -854,7 +854,7 @@
 		"value": "It's very easy to act like a jerk, and then say, \"Well, I'm a jerk, so that's that\", but it's just you making excuses for your excuses.",
 		"tags": [
 			{
-				"value": "Dirk Gently"
+				"value": "Dirk Gently's HDA"
 			}
 		]
 	},
@@ -862,7 +862,7 @@
 		"value": "You get in my way again, I'm taking your head off!",
 		"tags": [
 			{
-				"value": "Dirk Gently"
+				"value": "Dirk Gently's HDA"
 			}
 		]
 	},
@@ -870,7 +870,7 @@
 		"value": "That building? It's condemned. It was supposed to get torn down.",
 		"tags": [
 			{
-				"value": "Dirk Gently"
+				"value": "Dirk Gently's HDA"
 			}
 		]
 	},
@@ -878,7 +878,7 @@
 		"value": "They subside through the extortion of psychic energy. Originally, we classified them as vampires.",
 		"tags": [
 			{
-				"value": "Dirk Gently"
+				"value": "Dirk Gently's HDA"
 			}
 		]
 	},
@@ -890,6 +890,652 @@
 		"tags": [
 			{
 				"value": "Wolcen: Lords of mayhem"
+			}
+		]
+	},
+	{
+		"value": "I don't know, but it's looking good so far.",
+		"tags": [
+			{
+				"value": "Top Gun"
+			}
+		]
+	},
+	{
+		"value": "Maverick, you big stud, take me to bed or lose me forever.",
+		"tags": [
+			{
+				"value": "Top Gun"
+			}
+		]
+	},
+	{
+		"value": "Too aggressive? Yeah, I guess when I see something I go right after it.",
+		"tags": [
+			{
+				"value": "Top Gun"
+			}
+		]
+	},
+	{
+		"value": "- This is what I call a target-rich environment. - You live your life between your legs, Mav.",
+		"tags": [
+			{
+				"value": "movies"
+			},
+			{
+				"value": "Top Gun"
+			}
+		]
+	},
+	{
+		"value": "shed some light on the truth",
+		"tags": [
+			{
+				"value": "Tomb Raider"
+			}
+		]
+	},
+	{
+		"value": "You must come alive to the facts.",
+		"tags": [
+			{
+				"value": "Dirk Gently's HDA"
+			}
+		]
+	},
+	{
+		"value": "Friendship isn't just about someone being there for you. It's about you being there for them too.",
+		"tags": [
+			{
+				"value": "Dirk Gently's HDA"
+			}
+		]
+	},
+	{
+		"value": "Well, I'll be monkey's uncle, this is...",
+		"tags": [
+			{
+				"value": "Dirk Gently's HDA"
+			}
+		]
+	},
+	{
+		"value": "Oh boy... This is gonna be a wild one!",
+		"tags": [
+			{
+				"value": "Dirk Gently's HDA"
+			}
+		]
+	},
+	{
+		"value": "Care should be taken that the dirty checking function does not do any DOM access, as DOM access is orders of magnitude slower than property access on JavaScript object.",
+		"tags": [
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Put another record on!",
+	},
+	{
+		"value": "I'm just trying to think about the future and not be sad.",
+		"tags": [
+			{
+				"value": "Elon Musk"
+			}
+		]
+	},
+	{
+		"value": "He has no character.",
+	},
+	{
+		"value": "foul play",
+	},
+	{
+		"value": "You've got to work your way through it.",
+	},
+	{
+		"value": "I can pretend my ass off.",
+	},
+	{
+		"value": "Let it go by.",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			}
+		]
+	},
+	{
+		"value": "Wait up, can't think, getting a little sweaty.",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			}
+		]
+	},
+	{
+		"value": "salty dog",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			}
+		]
+	},
+	{
+		"value": "Normally I can talk, but...",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			}
+		]
+	},
+	{
+		"value": "You can go over there. I just like watching you go :)",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			}
+		]
+	},
+	{
+		"value": "You always do this to me, I always forget my train of thoughts with you!",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			}
+		]
+	},
+	{
+		"value": "- You wanna pet it? - Can I pet a little bit? Do we have a neutral... no, you don't really have a neutral area, no...",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			},
+			{
+				"value": "about dress"
+			}
+		]
+	},
+	{
+		"value": "stretchy in some areas which are impolite to name",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			},
+			{
+				"value": "about dress"
+			}
+		]
+	},
+	{
+		"value": "tight",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			},
+			{
+				"value": "about dress"
+			}
+		]
+	},
+	{
+		"value": "Well put!",
+		"tags": [
+			{
+				"value": "Late Late Show"
+			},
+			{
+				"value": "Craig Ferguson"
+			},
+			{
+				"value": "about something just said"
+			},
+			{
+				"value": "about clothes"
+			}
+		]
+	},
+	{
+		"value": "to lead on",
+	},
+	{
+		"value": "color blocking",
+		"tags": [
+			{
+				"value": "fashion"
+			}
+		]
+	},
+	{
+		"value": "forfeit",
+	},
+	{
+		"value": "Global Physical Security is responsible for defining, developing, implementing and managing all aspects of physical security policy, standards, systems, strategy and architecture.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Security bugs must be fixed promptly, thoroughly and in order of severity. Sloppy bugs fixes frequently cause other security vulnerabilities.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "This information provides feedback to managers on the security assurance posture of their teams.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Information about security vulnerabilities is highly restricted and must be carefully protected against disclosure.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Inevitably, however, some security bugs will exist.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Do not change the subject!",
+	},
+	{
+		"value": "matter",
+		"definitions": [
+			{
+				"value": "the reason for distress or a problem",
+				"examples": [
+					{
+						"value": "What's the matter?"
+					}
+				]
+			},
+			{
+				"value": "physical substance in general, as distinct from mind and spirit; (in physics) that which occupies space and possesses rest mass, especially as distinct from energy",
+				"examples": [
+					{
+						"value": "the structure and properties of matter"
+					}
+				]
+			},
+			{
+				"value": "the substance or content of a text as distinct from its manner or form",
+				"examples": [
+					{
+						"value": "It's also not a show that's performed very often - and having seen the content matter , I can see why."
+					},
+					{
+						"value": "It is a matter of choice."
+					},
+					{
+						"value": "It is a matter of time."
+					}
+				]
+			},
+			{
+				"value": "be of importance; have significance",
+				"examples": [
+					{
+						"value": "It doesn't matter what the guests wear."
+					},
+					{
+						"value": "It doesn't even matter!"
+					},
+					{
+						"value": "Just do it, no matter what!"
+					},
+					{
+						"value": "It is impossible, no matter how hard you try."
+					}
+				]
+			}
+		]
+	},
+	{
+		"value": "Everything changes over time.",
+	},
+	{
+		"value": "Been taking the high road for a long time.. I almost gave up. But I can finally see something on the horizon up there!! Wait!! Could it be?! Yep!! It’s karma!!",
+		"tags": [
+			{
+				"value": "Blake Shelton"
+			},
+			{
+				"value": "Twitter"
+			}
+		]
+	},
+	{
+		"value": "Tiny errors in the use of cryptographic algorithms or protocols can render whole systems insecure.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Make sure you avoid insecure coding pitfalls.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Fix the bugs carefully and thoroughly.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Track compliance with security standards.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "Nurture security expertise in your team.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "- Why do you rob banks? - That's where the money is.",
+		"tags": [
+			{
+				"value": "Willie Sutton"
+			}
+		]
+	},
+	{
+		"value": "I think it is worth pinning down how this started popping up.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "dissemble",
+		"definitions": [
+			{
+				"value": "conceal one's true motives, feelings, or beliefs",
+				"examples": [
+					{
+						"value": "An honest, sincere person with no need to dissemble."
+					}
+				]
+			}
+		]
+	},
+	{
+		"value": "I always tell the truth, even when I lie.",
+		"tags": [
+			{
+				"value": "movies"
+			},
+			{
+				"value": "Scarface"
+			}
+		]
+	},
+	{
+		"value": "The best lie is the truth told unconvincingly.",
+	},
+	{
+		"value": "The state represents every piece of data that changes in an application. You visit an URL, that’s state, make an Ajax call to retrieve a list of movies, that’s state again, you persist info to local storage, ditto, state.",
+		"tags": [
+			{
+				"value": "documentation"
+			}
+		]
+	},
+	{
+		"value": "A flip book or flick book is a book with a series of pictures that vary gradually from one page to the next, so that when the pages are turned rapidly, the pictures appear to animate.",
+	},
+	{
+		"value": "Delivery team is looking into using widget library experiences and relying on config schemas, but these couple of widgets raise flags.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "How do I know you aren't just making it up?",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "Can you two stop scamming our channel to make it LOOK like there’s cross team synergy? :troll:",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "Alternative solutions could include cache invalidation endpoints on the admin ports of the service, or using a timed cache expiration in memory, or some other solution along those lines.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "Having any user with login access being able to restart a production service just to perform a cache invalidation seems like a poor risk/access pattern and seems like a potential remediation item.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "I have a great deal of respect for you.",
+	},
+	{
+		"value": "All these animals will have died out by the time we return.",
+		"tags": [
+			{
+				"value": "Duolingo"
+			}
+		]
+	},
+	{
+		"value": "It's not clear, could you elaborate?",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "It was quite long and dense. All good, but maybe split it up a bit.",
+		"tags": [
+			{
+				"value": "Oracle"
+			},
+			{
+				"value": "conversation"
+			}
+		]
+	},
+	{
+		"value": "Restrictive state actions such as these undermine democratic structures in countries where the rule of law is challenged by rights-infringing surveillance regimes.",
+		"tags": [
+			{
+				"value": "news"
+			},
+			{
+				"value": "Telegram ban"
+			}
+		]
+	},
+	{
+		"value": "Life’s gone haywire, business as usual is done and over with.",
+		"tags": [
+			{
+				"value": "news"
+			},
+			{
+				"value": "Telegram ban"
+			}
+		]
+	},
+	{
+		"value": "The large scale of this \"collateral damage\" provides an apt illustration of the importance Russia places on pushing Telegram to either comply with its demands or perish.",
+		"tags": [
+			{
+				"value": "news"
+			},
+			{
+				"value": "Telegram ban"
+			}
+		]
+	},
+	{
+		"value": "Russia’s Telegram ban is a big, convoluted mess.",
+		"tags": [
+			{
+				"value": "news"
+			},
+			{
+				"value": "Telegram ban"
+			}
+		]
+	},
+	{
+		"value": "Durov's paper plane protest may show there is a shift in public opinions.",
+		"tags": [
+			{
+				"value": "news"
+			},
+			{
+				"value": "Telegram ban"
+			}
+		]
+	},
+	{
+		"value": "In a futile game of whack-a-mole, Roskomnadzor has now included Google IP addresses on its block list because they're related to Telegram.",
+		"tags": [
+			{
+				"value": "news"
+			},
+			{
+				"value": "Telegram ban"
+			}
+		]
+	},
+	{
+		"value": "Telegram founder vows to defy Russian ban.",
+		"tags": [
+			{
+				"value": "news"
+			},
+			{
+				"value": "Telegram ban"
 			}
 		]
 	}
